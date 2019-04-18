@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experian Credit Card Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.18/rg-1.0.3/datatables.min.css" />
+
+
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.18/rg-1.0.3/datatables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.19/sorting/date-eu.js"></script>
+
+    <script type="text/javascript" src="https://cdn.datatables.net/plug-ins/1.10.19/sorting/custom-data-source/dom-checkbox.js"></script>
+</head>
+<body>
+    <header>
+
+        <div role="banner" class="l-header header-public">
+            <div style="width: 100%;">
+                <div id="logo" style="margin-left: auto; margin-right: auto; margin-bottom:20px;"></div>
+            </div>
+            <div class="hr"></div>
+            <div style="clear:both;"></div>
+        </div>
+
+    </header>
+    <div style="width:100%">
+        <div style="margin-left: auto; margin-right: auto; margin-bottom:20px; width:833px;">
+
+
+            @RenderBody()
+
+        </div>
+        <hr />
+        <footer>
+            <div style="margin-left: auto; margin-right: auto; margin-bottom:20px; width:833px;">
+
+                <div style="width:50%; float:left; margin-top:20px; margin-bottom:20px">
+                    <a style="float:right; margin-bottom:40px" href="https://www.experianidentityservice.co.uk/Help/Terms" target="_blank" class="c-footerNavigation_link">Terms &amp; Conditions</a>
+                    <div style="clear:both"></div>
+                    <p>
+                        <small>* Experian acts as a credit broker and not a lender in the provision of its credit cards and personal, car finance and guarantor loans matching services, meaning it will show you products offered by lenders and other brokers.</small>
+                    </p>
+                    <p>
+                        <small>Experian acts independently and although our comparison services shows products for a range of lenders and other brokers it does not cover the whole of the market, meaning other products may be available to you. Experian comparison services are provided free however we will receive commission payments from lenders or brokers we introduce you to.</small>
+                    </p>
+                </div>
+
+                <div style="width:49%; float:right; margin-top:20px; margin-bottom:40px">
+                    <a href="https://www.experianidentityservice.co.uk/Help/Privacy" target="_blank" class="c-footerNavigation_link">Privacy Policy</a>
+
+                    <p style="margin-top:40px">
+                        <small>Experian Ltd (registered number 653331) provides all free and paid-for Experian consumer services. Experian Ltd is authorised and regulated by the Financial Conduct Authority (firm reference number 738097). Experian Ltd is registered in England and Wales with registered office at The Sir John Peace Building, Experian Way, NG2 Business Park, Nottingham, NG80 1ZZ.</small>
+                    </p>
+                    <p>
+                        <small><strong>Copyright © 2017, Experian Ltd. All rights reserved.</strong></small>
+                    </p>
+                </div>
+                <div style="clear:both"></div>
+            </div>
+        </footer>
+    </div>
+
+
+</body>
+</html>

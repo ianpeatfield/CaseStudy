@@ -1,0 +1,57 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@model  CaseStudyIanPeatfield.Models.ResultViewModel
+@using CaseStudyIanPeatfield.Controllers
+
+
+
+<div class="activePage" style="margin-left:100px; background-color: rgb(244, 244, 244) !important; color:rgb(121, 121, 120);">1</div>
+<div class="activePage" style="margin-left:150px;" >2</div>
+
+
+
+
+<div class="row" style="margin-top:42px;">
+    <div class="col-md-12" style="margin-top:100px">
+        <div class="">
+          
+            
+            @if (Model.ApplicationResultId == 1)
+            {
+                <div class="field text_field">
+                    <label>No credit cards are available</label>                   
+                    
+
+                </div>
+            }
+            @if (Model.ApplicationResultId == 2)
+            {
+                <div class="field text_field">
+                    <label>Congratulations you can apply for a Barclay Card</label>
+                    <label>18% APR</label>
+                    <div class="">
+                        <img style="width:500px" src="~/Images/barclaycard.png" />
+                    </div>
+
+                </div>
+                <div class="clear"></div>
+            }
+            @if (Model.ApplicationResultId == 3)
+            {
+                <div class="field text_field">
+                    <label>Congratulations you can apply for a Vanquis Card</label>
+                    <label>25% APR</label>
+                    <div class="">
+                        <img  style="width:500px" src="~/Images/vanquiscard.png" />
+                    </div>
+
+                </div>
+                <div class="clear"></div>
+            }
+
+        </div>
+    </div>
+
+
+</div>

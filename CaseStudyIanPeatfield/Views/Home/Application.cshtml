@@ -1,0 +1,104 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@model  CaseStudyIanPeatfield.Models.ApplicationViewModel
+@using CaseStudyIanPeatfield.Controllers
+
+
+
+<div class="activePage" style="margin-left:100px;">1</div>
+<div class="activePage" style="margin-left:150px; background-color: rgb(244, 244, 244) !important; color:rgb(121, 121, 120);">2</div>
+<script>
+    $(document).ready(function () {
+        $("#@Html.IdFor(model => model.DOBDay)").focusout(function(){
+            SetDate();
+        });
+
+        $("#@Html.IdFor(model => model.DOBMonth)").focusout(function(){
+            SetDate();
+        });
+
+        $("#@Html.IdFor(model => model.DOBYear)").focusout(function(){
+            SetDate();
+        });
+
+    });
+
+    function SetDate() {
+        var day = $("#@Html.IdFor(model => model.DOBDay)")[0].value;
+        var month = $("#@Html.IdFor(model => model.DOBMonth)")[0].value;
+        var year = $("#@Html.IdFor(model => model.DOBYear)")[0].value;
+
+        $("#@Html.IdFor(model => model.DOB)")[0].value = year + "-" + month + "-" + day;
+    }
+                            /*
+                            "Surname may only contain letters, dashes (-), apostrophes ('), or spaces. Please remove all other characters."
+                            "Please enter a value between {0} and {1} characters long."
+                            data_val_mindate_date = "15/04/1904", data_val_maxdate_date = "15/04/2003",
+                                ""
+
+                            */
+</script>
+@using (Html.BeginForm(nameof(HomeController.Application), nameof(HomeController).Replace("Controller", ""), FormMethod.Post))
+{
+
+
+    <div class="row" style="margin-top:42px;">
+        <div class="col-md-12" style="margin-top:100px">
+            <div class="">
+                <div class="field text_field">
+                    <label for="sisiforename">First name</label>
+
+                    <div class="ir">
+                        @Html.TextBoxFor(model => model.FirstName, new { @type = "text", @value = "", @class = "input-validation-valid valid" })
+                        @Html.ValidationMessageFor(model => model.FirstName, "", new { @class = "text-danger floatLeft" })
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="field text_field">
+                    <label for="sisisurname">Last name</label>
+                    <div class="ir">
+                        @Html.TextBoxFor(model => model.LastName, new { @type = "text", @value = "", @class = "input-validation-valid valid", })
+                        @Html.ValidationMessageFor(model => model.LastName, "", new { @class = "text-danger floatLeft" })
+                    </div>
+
+                </div>
+                <div class="clear"></div>
+                <div class="field date-field">
+
+                    <label for="sisidateofbirthd" class="obscure">Date of birth</label>
+                    <div class="ir">
+                        <div class = "d">
+                            @Html.TextBoxFor(model => model.DOBDay, new { @placeholder = "Day"})
+                            <br />@Html.ValidationMessageFor(model => model.DOBDay, "", new { @class = "text-danger floatLeft wrap" })
+                        </div>
+                        <div class = "d">
+                            @Html.TextBoxFor(model => model.DOBMonth, new { @placeholder = "Month"})
+                            <br />@Html.ValidationMessageFor(model => model.DOBMonth, "", new { @class = "text-danger floatLeft wrap" })
+                        </div>
+                        <div class = "d">
+                            @Html.TextBoxFor(model => model.DOBYear, new {  @placeholder = "Year"})
+                            <br />@Html.ValidationMessageFor(model => model.DOBYear, "", new { @class = "text-danger floatLeft wrap" })
+                        </div>
+                        @Html.HiddenFor(model => model.DOB)
+                        @Html.ValidationMessageFor(model => model.DOB, "", new { @class = "text-danger floatLeft" })
+                    </div>
+
+                </div>
+                <div class="clear"></div>
+                <div class="field text-field">
+                    <label for="" class="obscure">Your Anual Income</label>
+                    <div class="ir">
+                        @Html.TextBoxFor(model => model.AnnualIncome, new { @type = "number", @class = "input-validation-valid valid" })
+                        @Html.ValidationMessageFor(model => model.AnnualIncome, "", new { @class = "text-danger floatLeft" })
+                    </div>
+
+
+                </div>
+                <input id="SubmitButton" class="btn-submit finish submit" type="submit" name="Finish" value="Submit">
+            </div>
+        </div>
+
+
+    </div>
+}
