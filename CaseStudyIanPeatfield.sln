@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseStudyIanPeatfield", "CaseStudyIanPeatfield\CaseStudyIanPeatfield.csproj", "{C6B027C1-F3A5-4A54-B364-43838CBA9C33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CaseStudyIanPeatfield.Tests", "CaseStudyIanPeatfield.Tests\CaseStudyIanPeatfield.Tests.csproj", "{CFDB1969-E7D3-4AD2-A662-54529E4012A6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C6B027C1-F3A5-4A54-B364-43838CBA9C33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6B027C1-F3A5-4A54-B364-43838CBA9C33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6B027C1-F3A5-4A54-B364-43838CBA9C33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6B027C1-F3A5-4A54-B364-43838CBA9C33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFDB1969-E7D3-4AD2-A662-54529E4012A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFDB1969-E7D3-4AD2-A662-54529E4012A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFDB1969-E7D3-4AD2-A662-54529E4012A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFDB1969-E7D3-4AD2-A662-54529E4012A6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35
+		SolutionGuid = {91771CE9-01B4-4808-8F8A-721D02BA101D}
+	EndGlobalSection
+EndGlobal
